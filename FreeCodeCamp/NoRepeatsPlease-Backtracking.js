@@ -1,3 +1,10 @@
+// No Repeats Please
+// Return the number of total permutations of the provided string that don't have repeated consecutive letters. Assume that all characters in the provided string are each unique.
+
+// For example, aab should return 2 because it has 6 total permutations (aab, aab, aba, aba, baa, baa), but only 2 of them (aba and aba) don't have the same letter (in this case a) repeating.
+
+// *************************************************Solution**************************************************************//
+
 //Use recursive to produce all the permutations of an array: remove the first element of the array, find out the permutation of the rest until there's only one element in the array. Then push the removed element back to the array to complete the permutation. When the permutations complete, push the result to the results array.
 
 function allPermutations(arr){
