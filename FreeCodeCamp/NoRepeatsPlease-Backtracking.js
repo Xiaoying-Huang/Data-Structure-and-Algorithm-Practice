@@ -1,3 +1,5 @@
+//Use recursive to produce all the permutations of an array: remove the first element of the array, find out the permutation of the rest until there's only one element in the array. Then push the removed element back to the array to complete the permutation. When the permutations complete, push the result to the results array.
+
 function allPermutations(arr){
     let results=[];
 
