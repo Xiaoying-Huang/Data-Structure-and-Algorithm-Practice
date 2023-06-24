@@ -12,3 +12,37 @@
 // 7 + 13 = 20 → Indices 0 + 3 = 3
 // 9 + 11 = 20 → Indices 1 + 2 = 3
 // 3 + 3 = 6 → Return 6
+
+/**************************************************Solution****************************************************/
+//1. find out the pair 
+//2. Seek index of the pair using indexOf() method, start searching from i+1, so that the return value could be as low as possible
+//3. Save the indices found into an array pair indices, so that when next pair is found, the indices of the pair could be checked so that it's not used duplicated
+//4. Sum up the indices array
+
+function pairwise(arr, arg) {
+    let pairIndices = [];
+    for (let i = 0; i < arr.length; i++) {
+        let pair = arg - arr[i];
+        let pairIndex = arr.indexOf(pair, i + 1);//start searching from i+1, so that the previous elements not to be used. If pairIndex===-1, it meant that the pair element doesn't exist.
+        while (pairIndex < arr.length && pairIndex !== -1) {
+            if (!pairIndices.includes(pairIndex) && (!pairIndices.includes(i))) {
+                pairIndices.push(i, pairIndex);
+                break;
+            } else {
+                pairIndex = arr.indexOf(pair, pairIndex + 1);
+            }
+        }
+    }
+    let sumOfPairIndices;
+    if (pairIndices.length==0) {
+        sumOfPairIndices = 0;
+    } else {
+        sumOfPairIndices = pairIndices.reduce((previous, current) => previous + current);
+    }
+
+    console.log(pairIndices);
+    console.log(sumOfPairIndices);
+    return sumOfPairIndices;
+}
+
+pairwise([], 100);
