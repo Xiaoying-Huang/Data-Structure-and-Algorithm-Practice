@@ -13,6 +13,8 @@
 // 9 + 11 = 20 → Indices 1 + 2 = 3
 // 3 + 3 = 6 → Return 6
 
+//https://www.freecodecamp.org/learn/coding-interview-prep/algorithms/pairwise
+
 /**************************************************Solution****************************************************/
 //1. find out the pair 
 //2. Seek index of the pair using indexOf() method, start searching from i+1, so that the return value could be as low as possible

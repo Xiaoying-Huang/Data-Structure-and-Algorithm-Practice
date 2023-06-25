@@ -3,6 +3,8 @@
 
 // Instructions: Write a function selectionSort which takes an array of integers as input and returns an array of these integers in sorted order from least to greatest.
 
+//https://www.freecodecamp.org/learn/coding-interview-prep/algorithms/implement-selection-sort
+
 function selectionSort(array) {
     // Only change code below this line
     for (let i = 0; i < array.length; i++) {
