@@ -23,7 +23,6 @@ function mergeSort(array) {
         let right = array.slice(dividePoint);
         left = mergeSort(left);
         right = mergeSort(right);
-        console.log("left", left, "right", right);
         //2.Merge
         for (let i = 0; i < right.length; i++) {
             let inserted = false;
@@ -37,7 +36,6 @@ function mergeSort(array) {
             if (!inserted) {
                 left.push(right[i]);
             }
-
         }
         return left;
     }
@@ -46,5 +44,5 @@ function mergeSort(array) {
 }
 
 //test
-let a = mergeSort([2, 4, 1, 5,7]);
+let a = mergeSort([2, 4, 1, 5, 7]);
 console.log(a);
